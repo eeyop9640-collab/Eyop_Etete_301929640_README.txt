@@ -31,3 +31,16 @@ FROM locations;
 
 SELECT *
 FROM deliveries;
+
+
+SELECT
+    d.driver_id,
+    d.first_name,
+    d.last_name,
+    v.registration_number,
+    v.vehicle_type,
+    v.make,
+    v.model
+FROM drivers d
+JOIN vehicles v
+    ON d.driver_id = v.driver_id;
