@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="pAf5smSiahjkKROMHj8u">
+    <mxGraphModel dx="2358" dy="1188" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-18" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Customers&lt;div&gt;---------------------------------------------------------&lt;/div&gt;&lt;div&gt;Pk customer_id&lt;/div&gt;&lt;div&gt;first_name&lt;/div&gt;&lt;div&gt;last_name&lt;/div&gt;&lt;div&gt;email&lt;/div&gt;&lt;div&gt;Phone&lt;/div&gt;&lt;div&gt;created_at&lt;/div&gt;" vertex="1">
+          <mxGeometry height="147" width="230" x="637" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-23" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.319;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-24" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-25" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-5">
+          <mxGeometry relative="1" x="-0.0268" as="geometry">
+            <Array as="points">
+              <mxPoint x="933" y="389" />
+              <mxPoint x="933" y="742" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Deliveries&lt;div&gt;---------------------------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;PK&amp;nbsp; &amp;nbsp; delivery_id&lt;/span&gt;&lt;/div&gt;&amp;nbsp;tracking_number&lt;/div&gt;&lt;div&gt;&lt;div&gt;FK&amp;nbsp; customer_id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; driver_id&lt;br&gt;&lt;div&gt;FK&amp;nbsp; pickup_location_id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; destination_location_id&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp;created_at&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; pickup_date&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;expected_delivery_date&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; actual_delivery_date&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;status&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; delivery_fee&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="238" width="230" x="637" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-20" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="633" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-29" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.089;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-4">
+          <mxGeometry relative="1" x="0.2237" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="549" />
+              <mxPoint x="1015.3" y="549" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Drivers&lt;div&gt;------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK&amp;nbsp; driver_id&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; first_name&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; last_name&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; phone&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; licence_number&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; status&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; created_at&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="178" width="159" x="393" y="271" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-22" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.939;entryY=0.496;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Vehicles&lt;div&gt;------------------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK&amp;nbsp; vehicle_id&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; registration_number&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; vehicle_type&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; make&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; model&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; year_manufactured&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; driver_id&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; status&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="208" width="196" x="997" y="271" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-26" edge="1" parent="1" source="9FqGmyCz2N7n3gmPxIRx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.402;entryY=-0.018;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="9FqGmyCz2N7n3gmPxIRx-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Tracking_Events&lt;div&gt;-----------------------------&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;PK&amp;nbsp; tracking_event_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FK&amp;nbsp; delivery_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FK&amp;nbsp; location_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; status&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; event_time&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; remarks&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="178" width="174" x="999" y="653" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Payments&lt;div&gt;---------------------------------------------------------&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK&amp;nbsp; payment_id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; delivery_id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; amount&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; payment_method&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; payment_status&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; transaction_reference&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; payment_date&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; created_at&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="208" width="230" x="637" y="653" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Packages&lt;div&gt;-----------------------------&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;PK&amp;nbsp; package_id&lt;/div&gt;&lt;div&gt;FK&amp;nbsp; delivery_id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; description&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; weight_kg&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; package_type&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; declared_value&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; fragile&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; created_at&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="180" x="396" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="9FqGmyCz2N7n3gmPxIRx-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Locations&lt;div&gt;__________________&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;PK&amp;nbsp; location_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; address_line&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; city&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; state&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; country&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; latitude&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp; &amp;nbsp; longitude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="147" x="1026" y="919" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
