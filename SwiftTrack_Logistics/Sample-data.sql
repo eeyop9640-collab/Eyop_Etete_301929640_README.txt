@@ -26,3 +26,24 @@ VALUES
     'samuel.eze@example.com',
     '08033333333'
 );
+
+
+- DRIVERS
+
+INSERT INTO drivers
+(first_name, last_name, phone, licence_number, status)
+VALUES
+(
+    'James',
+    'Okafor',
+    '08060000001',
+    'DRV-LIC-001',
+    'Available'
+),
+(
+    'Peter',
+    'Adeyemi',
+    '08060000002',
+    'DRV-LIC-002',
+    'Available'
+);
