@@ -77,3 +77,34 @@ Deliveries	        50,000
 
 
 The larger dataset provides a more meaningful environment for evaluating sequential scans, B-tree indexes, composite indexes, joins and aggregation operations.
+
+
+Post-Optimisation Result
+
+After creating a B-tree index on expected_delivery_date, PostgreSQL changed the execution strategy from a Sequential Scan to a Bitmap Index Scan combined with a Bitmap Heap Scan.
+
+
+Metric	        Before Index	      After Index
+Access Method	  Sequential Scan	   Bitmap Heap/Index Scan
+Actual Rows	    6,052	             6,052
+Planning Time	  0.273 ms	         0.903 ms
+Execution Time	5.497 ms	         1.777 ms
+
+The execution time decreased from 5.497 ms to 1.777 ms, representing an improvement of approximately 67.7%.
+
+The B-tree index allowed PostgreSQL to identify matching delivery records using expected_delivery_date rather than scanning all 50,000 records.
+
+Although planning time increased slightly, the reduction in execution time demonstrates the benefit of indexing for this date-range workload.
+
+
+Experiment 5: Materialised View
+
+A materialised view named monthly_delivery_summary was created to store precomputed monthly delivery and revenue totals.
+
+The view was queried using:
+
+SELECT *
+
+FROM monthly_delivery_summary
+
+ORDER BY month;
