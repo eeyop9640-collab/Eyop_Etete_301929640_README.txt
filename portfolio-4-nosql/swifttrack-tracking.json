@@ -1,0 +1,49 @@
+{
+  "tracking_number": "SWFT-2026-0001",
+  "delivery_status": "Delivered",
+  "customer_id": 1,
+  "package": {
+"description": "Laptop Computer",
+    "weight_kg": 2.5,
+    "package_type": "Electronics",
+    "declared_value": 850000,
+    "fragile": true
+  },
+  "pickup_location": {
+    "city": "Ikeja",
+    "state": "Lagos",
+    "country": "Nigeria"
+  },
+  "destination_location": {
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "country": "Nigeria"
+  },
+  "tracking_events": [
+    {
+      "status": "Order Created",
+      "location": "Ikeja",
+      "event_time": "2026-11-10T08:00:00+01:00"
+    },
+    {
+      "status": "Picked Up",
+      "location": "Ikeja",
+      "event_time": "2026-11-10T09:30:00+01:00"
+    },
+    {
+      "status": "At Hub",
+      "location": "Lagos Distribution Hub",
+      "event_time": "2026-11-10T12:00:00+01:00"
+    },
+    {
+      "status": "In Transit",
+      "location": "Victoria Island",
+      "event_time": "2026-11-10T14:20:00+01:00"
+    },
+    {
+      "status": "Delivered",
+      "location": "Victoria Island",
+      "event_time": "2026-11-10T16:10:00+01:00"
+    }
+  ]
+}
