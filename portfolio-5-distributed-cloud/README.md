@@ -1,8 +1,8 @@
-Portfolio 5: Distributed and Cloud Database
+# Portfolio 5: Distributed and Cloud Database
 
 
 
-Objective
+## Objective
 
 
 * The objective of this portfolio activity is to demonstrate how the SwiftTrack Logistics database could be deployed in a distributed cloud environment to improve scalability, availability, resilience and performance.
@@ -10,7 +10,7 @@ Objective
 * The proposed architecture considers database replication, sharding, availability and consistency using the same SwiftTrack Logistics case study developed throughout the portfolio.
 
 
-Business Scenario
+# Business Scenario
 
 
 * SwiftTrack Logistics initially operates from a central database environment but is assumed to expand operations across multiple Nigerian locations including Lagos, Abuja and Kano.
@@ -21,13 +21,14 @@ Business Scenario
 
 
 
-Proposed Distributed Architecture
+# Proposed Distributed Architecture
+
 SwiftTrack would use a primary cloud database with replicated database nodes to support resilience and availability.
 
 The conceptual architecture is:
 
-Customers / Drivers / Operations | v SwiftTrack Application | v Cloud Database Layer / |
-/ |
+Customers / Drivers / Operations | v SwiftTrack Application | v Cloud Database Layer / | / |
+
 Lagos Abuja Kano Replica Replica Replica
 
 
@@ -35,46 +36,34 @@ Lagos Abuja Kano Replica Replica Replica
 
 
 
+# Database Replication
 
-
-Database Replication
 Replication maintains copies of database information across multiple database nodes.
 
 For SwiftTrack, the primary database would process the authoritative transactional workload while replicas could support resilience and selected read workloads.
 
-Example:
+## Example:
 
 Primary Database | +------ Replica 1 | +------ Replica 2
 
 
 
 
+# Database Sharding
 
-
-
-Database Sharding
 As SwiftTrack grows, the delivery dataset may eventually become too large for a single database node to process efficiently.
 
 Sharding distributes portions of a dataset across multiple database nodes.
 
 A geographical sharding model could conceptually divide delivery information by operational region.
 
-Example:
+## Example:
 
 *  Shard 1 Lagos / South-West operations
 
 *  Shard 2 Abuja / North-Central operations
 
 *  Shard 3 Kano / Northern operations
-
-
-
-
-
-
-
-
-
 
 
 Geographical sharding could reduce the amount of data each node processes and may place operational data closer to the workload generating it.
@@ -85,11 +74,7 @@ Therefore, sharding would only be introduced when database volume and workload j
 
 
 
-
-
-
-
-Availability and Resilience
+# Availability and Resilience
 
 
 A distributed architecture reduces dependence on a single database instance.
@@ -106,21 +91,11 @@ The architecture would support:
 *  Disaster recovery testing
 
   
-This is particularly relevant to SwiftTrack because customers and operations personnel may require continuous access to delivery and tracking information.
+
+# Consistency Considerations
 
 
-
-
-
-
-
-
-
-
-Consistency Considerations
-
-
-Distributed databases introduce a trade-off between availability, performance and how quickly replicated data becomes consistent across nodes.
+## Distributed databases introduce a trade-off between availability, performance and how quickly replicated data becomes consistent across nodes.
 
 SwiftTrack's requirements depend on the type of information.
 
@@ -141,16 +116,9 @@ The architecture should therefore prioritise transactional accuracy for operatio
 
 
 
+# Distributed Data Strategy
 
-
-
-
-Distributed Data Strategy
-
-
-SwiftTrack could use different database technologies for different workloads.
-
-PostgreSQL
+## PostgreSQL
 
 
 PostgreSQL remains appropriate for core transactional information including:
@@ -163,7 +131,7 @@ PostgreSQL remains appropriate for core transactional information including:
 
 These workloads benefit from relational integrity and transactional consistency.
 
-MongoDB
+# MongoDB
 
 
 A document database can complement PostgreSQL for flexible tracking-event workloads where information is naturally represented as nested documents.
@@ -173,21 +141,21 @@ The architecture therefore demonstrates polyglot persistence: selecting database
 
 
 
-Distributed Database Trade-offs
+# Distributed Database Trade-offs
 
 
-Area	                  Benefit	                         Challenge
+Area                        |	 Benefit	                        |  Challenge
 
-Replication	            Improved availability	           Replication lag
-Sharding	              Horizontal scalability	         Cross-shard query complexity
-Multiple regions      	Reduced regional dependency	     Higher cost and administration
-Read replicas	          Read-query scalability	         Replica consistency delay
-Cloud deployment	      Flexible capacity and recovery	 Provider dependency and cost
-Backups	                Recovery from data loss	         Recovery procedures must be tested
+Replication	              Improved availability	                Replication lag
+Sharding	              Horizontal scalability	              Cross-shard query complexity
+Multiple regions      	Reduced regional dependency	          Higher cost and administration
+Read replicas	          Read-query scalability	              Replica consistency delay
+Cloud deployment	      Flexible capacity and recovery	      Provider dependency and cost
+Backups	                Recovery from data loss	              Recovery procedures must be tested
 
 
 
-Conclusion
+# Conclusion
 
 
 The proposed distributed architecture allows SwiftTrack Logistics to scale beyond a single database server while improving resilience and availability.
