@@ -27,7 +27,7 @@ SwiftTrack would use a primary cloud database with replicated database nodes to 
 
 The conceptual architecture is:
 
-Customers / Drivers / Operations | v SwiftTrack Application | v Cloud Database Layer / | / |
+| Customers | Drivers / Operations | v SwiftTrack Application | v Cloud Database Layer / | / |
 
 Lagos Abuja Kano Replica Replica Replica
 
@@ -144,14 +144,19 @@ The architecture therefore demonstrates polyglot persistence: selecting database
 # Distributed Database Trade-offs
 
 
-Area                        |	 Benefit	                        |  Challenge
+| --Area--             |    -- Benefit --	                            |  Challenge                           |         
 
-Replication	              Improved availability	                Replication lag
-Sharding	              Horizontal scalability	              Cross-shard query complexity
-Multiple regions      	Reduced regional dependency	          Higher cost and administration
-Read replicas	          Read-query scalability	              Replica consistency delay
-Cloud deployment	      Flexible capacity and recovery	      Provider dependency and cost
-Backups	                Recovery from data loss	              Recovery procedures must be tested
+| Replication	     |    Improved availability	              | Replication lag                      |
+
+| Sharding	       |    Horizontal scalability	            | Cross-shard query complexity         |
+
+Multiple regions   |    Reduced regional dependency	        | Higher cost and administration       |
+
+Read replicas	     |    Read-query scalability	            | Replica consistency delay            |
+
+Cloud deployment	 |    Flexible capacity and recovery	    | Provider dependency and cost         |
+
+Backups	           |    Recovery from data loss	             | Recovery procedures must be tested   |
 
 
 
