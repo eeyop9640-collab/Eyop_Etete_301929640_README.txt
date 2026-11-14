@@ -169,3 +169,31 @@ MongoDB
 A document database can complement PostgreSQL for flexible tracking-event workloads where information is naturally represented as nested documents.
 
 The architecture therefore demonstrates polyglot persistence: selecting database technologies according to the characteristics of the workload rather than replacing the relational database completely.
+
+
+
+
+Distributed Database Trade-offs
+
+
+Area	                  Benefit	                         Challenge
+
+Replication	            Improved availability	           Replication lag
+Sharding	              Horizontal scalability	         Cross-shard query complexity
+Multiple regions      	Reduced regional dependency	     Higher cost and administration
+Read replicas	          Read-query scalability	         Replica consistency delay
+Cloud deployment	      Flexible capacity and recovery	 Provider dependency and cost
+Backups	                Recovery from data loss	         Recovery procedures must be tested
+
+
+
+Conclusion
+
+
+The proposed distributed architecture allows SwiftTrack Logistics to scale beyond a single database server while improving resilience and availability.
+
+Replication provides redundancy, while sharding can support future horizontal growth as delivery volumes increase.
+
+The design also recognises the trade-offs introduced by distributed systems, particularly consistency, replication delay, operational complexity and cross-shard queries.
+
+For SwiftTrack, PostgreSQL would remain the authoritative transactional database, while document-oriented technology could complement it for suitable tracking workloads.
