@@ -1,6 +1,6 @@
-Portfolio 2: Query Processing and Optimisation
+# Portfolio 2: Query Processing and Optimisation
 
-Objective
+## Objective
 
 The objective of this portfolio activity is to investigate query-processing and optimisation techniques using the SwiftTrack Logistics PostgreSQL database.
 
@@ -12,7 +12,7 @@ The activity evaluates SQL execution plans before and after the application of o
 * SQL
 * EXPLAIN ANALYZE
 
-Experiments
+## Experiments
 
 1. Baseline query performance
 2. B-tree index optimisation
@@ -20,7 +20,7 @@ Experiments
 4. JOIN query optimisation
 5. Aggregation and materialised views
 
-Evidence
+## Evidence
 
 Each optimisation experiment will include:
 
@@ -36,14 +36,14 @@ Each optimisation experiment will include:
 
 
 
-Performance Test Dataset
+## Performance Test Dataset
 
 
 The original SwiftTrack Logistics database contained a small dataset created for relational database validation.
 
 
 
-The initial database contained:
+## The initial database contained:
 
 
 
@@ -65,7 +65,7 @@ PostgreSQL generate_series() was therefore used to generate a larger synthetic d
 The generated records are test data and do not represent real customers, drivers, vehicles or deliveries.
 
 
-Performance Dataset
+## Performance Dataset
 The database was subsequently expanded to provide sufficient data for query execution-plan and indexing experiments.
 
 Table	             Performance Dataset
@@ -79,7 +79,7 @@ Deliveries	        50,000
 The larger dataset provides a more meaningful environment for evaluating sequential scans, B-tree indexes, composite indexes, joins and aggregation operations.
 
 
-Post-Optimisation Result
+## Post-Optimisation Result
 
 After creating a B-tree index on expected_delivery_date, PostgreSQL changed the execution strategy from a Sequential Scan to a Bitmap Index Scan combined with a Bitmap Heap Scan.
 
@@ -97,7 +97,7 @@ The B-tree index allowed PostgreSQL to identify matching delivery records using 
 Although planning time increased slightly, the reduction in execution time demonstrates the benefit of indexing for this date-range workload.
 
 
-Experiment 5: Materialised View
+# Experiment 5: Materialised View
 
 A materialised view named monthly_delivery_summary was created to store precomputed monthly delivery and revenue totals.
 
