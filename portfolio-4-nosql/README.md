@@ -1,38 +1,40 @@
-Portfolio 4: NoSQL and Advanced Data Models
+# Portfolio 4: NoSQL and Advanced Data Models
 
 
-Objective
+## Objective
 
 
-The objective of this portfolio activity is to demonstrate how a NoSQL document database can complement the relational PostgreSQL implementation of the SwiftTrack Logistics Management System.
+- The objective of this portfolio activity is to demonstrate how a NoSQL document database can complement the relational PostgreSQL implementation of the SwiftTrack Logistics Management System.
 
-A document-oriented model was selected for delivery tracking data because individual deliveries may contain multiple tracking events with varying structures.
+- A document-oriented model was selected for delivery tracking data because individual deliveries may contain multiple tracking events with varying structures.
 
 
-Selected Model
+## Selected Model
 
 Document Database
 
 
-Implementation
+## Implementation
 
 Delivery tracking information is represented as a JSON-style document containing delivery information and an embedded array of tracking events.
 
 
-Relational vs NoSQL
+# Relational vs NoSQL
 
 PostgreSQL is used for highly structured transactional data, including customers, drivers, vehicles, deliveries and payments.
 
 The document model provides a flexible representation for tracking histories where multiple related events can be stored within a single delivery document.
 
-Practical MongoDB Implementation
+# Practical MongoDB Implementation
+
 The NoSQL model was implemented using MongoDB Community Server and MongoDB Compass.
 
 A database named swifttrack_nosql was created with a collection named delivery_tracking.
 
 Delivery documents were inserted using MongoDB's insertOne() operation.
 
-Example:
+
+##Example:
 
 db.delivery_tracking.insertOne({
 
@@ -69,10 +71,7 @@ db.delivery_tracking.insertOne({
 
 
 
-Practical MongoDB Implementation
-
-
-
+## Practical MongoDB Implementation
 
 
 The NoSQL model was implemented using MongoDB Community Server and MongoDB Compass.
@@ -84,15 +83,9 @@ Delivery information was stored as documents containing nested package, location
 
 
 
-Embedded Array Query
-
-
-
+## Embedded Array Query
 
 The following query was used to retrieve deliveries containing a Delivered tracking event:
-
-
-
 
 db.delivery_tracking.find({
 
