@@ -35,22 +35,69 @@ Delivery documents were inserted using MongoDB's insertOne() operation.
 Example:
 
 db.delivery_tracking.insertOne({
+
     tracking_number: "SWFT-2026-0001",
+    
     delivery_status: "Delivered",
+    
     customer_id: 1,
+    
     package: {
+    
         description: "Laptop Computer",
+        
         weight_kg: 2.5,
+        
         fragile: true
+        
     },
     tracking_events: [
+    
         {
             status: "Order Created",
+            
             location: "Ikeja"
         },
         {
             status: "Delivered",
+            
             location: "Victoria Island"
         }
     ]
+});
+
+
+
+
+Practical MongoDB Implementation
+
+
+
+
+
+The NoSQL model was implemented using MongoDB Community Server and MongoDB Compass.
+
+A database named swifttrack_nosql was created with a collection named delivery_tracking.
+
+Delivery information was stored as documents containing nested package, location and tracking-event information.
+
+
+
+
+Embedded Array Query
+
+
+
+
+The following query was used to retrieve deliveries containing a Delivered tracking event:
+
+
+
+
+db.delivery_tracking.find({
+
+
+    "tracking_events.status": "Delivered"
+    
+    
 });
