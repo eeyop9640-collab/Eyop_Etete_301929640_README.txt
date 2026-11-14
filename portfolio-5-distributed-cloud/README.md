@@ -61,11 +61,11 @@ A geographical sharding model could conceptually divide delivery information by 
 
 Example:
 
-Shard 1 Lagos / South-West operations
+*  Shard 1 Lagos / South-West operations
 
-Shard 2 Abuja / North-Central operations
+*  Shard 2 Abuja / North-Central operations
 
-Shard 3 Kano / Northern operations
+*  Shard 3 Kano / Northern operations
 
 
 
@@ -90,18 +90,22 @@ Therefore, sharding would only be introduced when database volume and workload j
 
 
 Availability and Resilience
+
+
 A distributed architecture reduces dependence on a single database instance.
 
 SwiftTrack could use multiple availability zones so that a failure affecting one database host or zone does not necessarily make the logistics platform unavailable.
 
 The architecture would support:
 
-Database redundancy
-Automated backups
-Point-in-time recovery
-Failure monitoring
-Replica promotion/failover
-Disaster recovery testing
+*  Database redundancy
+*  Automated backups
+*  Point-in-time recovery
+*  Failure monitoring
+* Replica promotion/failover
+*  Disaster recovery testing
+
+  
 This is particularly relevant to SwiftTrack because customers and operations personnel may require continuous access to delivery and tracking information.
 
 
@@ -113,23 +117,26 @@ This is particularly relevant to SwiftTrack because customers and operations per
 
 
 
-
 Consistency Considerations
+
+
 Distributed databases introduce a trade-off between availability, performance and how quickly replicated data becomes consistent across nodes.
 
 SwiftTrack's requirements depend on the type of information.
 
 Strong consistency is particularly important for:
 
-Payments
-Delivery assignment
-Delivery status changes
-Customer account information
-Slight replication delay may be more tolerable for:
+*  Payments
+*  Delivery assignment
+*  Delivery status changes
+*  Customer account information
+*  Slight replication delay may be more tolerable for:
 
-Historical reporting
-Analytical dashboards
-Management reporting
+*  Historical reporting
+*  Analytical dashboards
+*  Management reporting
+
+  
 The architecture should therefore prioritise transactional accuracy for operational data while replicas may be used for suitable read-oriented workloads.
 
 
@@ -138,22 +145,27 @@ The architecture should therefore prioritise transactional accuracy for operatio
 
 
 
-
-
 Distributed Data Strategy
+
+
 SwiftTrack could use different database technologies for different workloads.
 
 PostgreSQL
+
+
 PostgreSQL remains appropriate for core transactional information including:
 
    *  Customers
-Drivers
-Vehicles
-Deliveries
-Payments
+   *  Drivers
+   *  Vehicles
+   *  Deliveries
+   *  Payments
+
 These workloads benefit from relational integrity and transactional consistency.
 
 MongoDB
+
+
 A document database can complement PostgreSQL for flexible tracking-event workloads where information is naturally represented as nested documents.
 
 The architecture therefore demonstrates polyglot persistence: selecting database technologies according to the characteristics of the workload rather than replacing the relational database completely.
